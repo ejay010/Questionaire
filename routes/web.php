@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('home.index'));
 });
+
+Route::resource('home', 'HomeController');
+Route::resource('voter', 'VotersController');
